@@ -1,0 +1,281 @@
+{
+  "random_state": 42,
+  "split": {
+    "train": 614,
+    "test": 154,
+    "test_size": 0.2,
+    "stratified": true
+  },
+  "dataset": {
+    "n_samples": 768,
+    "n_features": 8,
+    "class_counts": {
+      "no_diabetes": 500,
+      "diabetes": 268
+    },
+    "positive_rate": 0.349,
+    "missing": {
+      "Insulin": {
+        "zeros": 374,
+        "percent": 48.7
+      },
+      "SkinThickness": {
+        "zeros": 227,
+        "percent": 29.56
+      },
+      "BloodPressure": {
+        "zeros": 35,
+        "percent": 4.56
+      },
+      "BMI": {
+        "zeros": 11,
+        "percent": 1.43
+      },
+      "Glucose": {
+        "zeros": 5,
+        "percent": 0.65
+      }
+    },
+    "correlation_with_outcome": {
+      "Pregnancies": 0.222,
+      "Glucose": 0.495,
+      "BloodPressure": 0.171,
+      "SkinThickness": 0.259,
+      "Insulin": 0.303,
+      "BMI": 0.314,
+      "DiabetesPedigreeFunction": 0.174,
+      "Age": 0.238
+    }
+  },
+  "cross_validation": [
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.7882,
+      "precision": 0.7638,
+      "recall": 0.5748,
+      "f1": 0.6545,
+      "roc_auc": 0.8434,
+      "roc_auc_std": 0.0185
+    },
+    {
+      "model": "SVM (RBF)",
+      "accuracy": 0.7801,
+      "precision": 0.7415,
+      "recall": 0.5842,
+      "f1": 0.6485,
+      "roc_auc": 0.8333,
+      "roc_auc_std": 0.0228
+    },
+    {
+      "model": "K-Nearest Neighbours",
+      "accuracy": 0.7525,
+      "precision": 0.69,
+      "recall": 0.5565,
+      "f1": 0.6109,
+      "roc_auc": 0.8221,
+      "roc_auc_std": 0.0299
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.7687,
+      "precision": 0.6995,
+      "recall": 0.6028,
+      "f1": 0.6458,
+      "roc_auc": 0.8209,
+      "roc_auc_std": 0.0209
+    },
+    {
+      "model": "Decision Tree",
+      "accuracy": 0.6726,
+      "precision": 0.5307,
+      "recall": 0.5795,
+      "f1": 0.5518,
+      "roc_auc": 0.651,
+      "roc_auc_std": 0.0148
+    }
+  ],
+  "test_results": [
+    {
+      "model": "Random Forest",
+      "accuracy": 0.7403,
+      "precision": 0.6591,
+      "recall": 0.537,
+      "f1": 0.5918,
+      "roc_auc": 0.816
+    },
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.7078,
+      "precision": 0.6,
+      "recall": 0.5,
+      "f1": 0.5455,
+      "roc_auc": 0.813
+    },
+    {
+      "model": "SVM (RBF)",
+      "accuracy": 0.7403,
+      "precision": 0.6522,
+      "recall": 0.5556,
+      "f1": 0.6,
+      "roc_auc": 0.7964
+    },
+    {
+      "model": "K-Nearest Neighbours",
+      "accuracy": 0.7338,
+      "precision": 0.6327,
+      "recall": 0.5741,
+      "f1": 0.6019,
+      "roc_auc": 0.788
+    },
+    {
+      "model": "Decision Tree",
+      "accuracy": 0.6818,
+      "precision": 0.5532,
+      "recall": 0.4815,
+      "f1": 0.5149,
+      "roc_auc": 0.6357
+    }
+  ],
+  "tuning": [
+    {
+      "model": "Logistic Regression",
+      "best_params": {
+        "C": 0.1,
+        "class_weight": "balanced"
+      },
+      "cv_roc_auc": 0.845,
+      "test_accuracy": 0.7078,
+      "test_precision": 0.5714,
+      "test_recall": 0.6667,
+      "test_f1": 0.6154,
+      "test_roc_auc": 0.8104
+    },
+    {
+      "model": "Random Forest",
+      "best_params": {
+        "class_weight": null,
+        "max_depth": 5,
+        "min_samples_leaf": 3,
+        "n_estimators": 400
+      },
+      "cv_roc_auc": 0.8388,
+      "test_accuracy": 0.7338,
+      "test_precision": 0.6512,
+      "test_recall": 0.5185,
+      "test_f1": 0.5773,
+      "test_roc_auc": 0.8119
+    },
+    {
+      "model": "SVM (RBF)",
+      "best_params": {
+        "C": 1,
+        "class_weight": "balanced",
+        "gamma": 0.01
+      },
+      "cv_roc_auc": 0.8493,
+      "test_accuracy": 0.7403,
+      "test_precision": 0.6094,
+      "test_recall": 0.7222,
+      "test_f1": 0.661,
+      "test_roc_auc": 0.8096
+    }
+  ],
+  "best_model": {
+    "name": "SVM (RBF)",
+    "params": {
+      "C": 1,
+      "class_weight": "balanced",
+      "gamma": 0.01
+    },
+    "cv_roc_auc": 0.8493,
+    "selected_on": "cross-validated ROC-AUC, training set only",
+    "test_roc_auc": 0.8096,
+    "threshold": 0.285,
+    "at_default_threshold": {
+      "accuracy": 0.7078,
+      "precision": 0.6,
+      "recall": 0.5,
+      "f1": 0.5455,
+      "confusion_matrix": [
+        [
+          82,
+          18
+        ],
+        [
+          27,
+          27
+        ]
+      ]
+    },
+    "at_tuned_threshold": {
+      "accuracy": 0.7208,
+      "precision": 0.5714,
+      "recall": 0.8148,
+      "f1": 0.6718,
+      "confusion_matrix": [
+        [
+          67,
+          33
+        ],
+        [
+          10,
+          44
+        ]
+      ]
+    },
+    "classification_report": {
+      "No diabetes": {
+        "precision": 0.8701298701298701,
+        "recall": 0.67,
+        "f1-score": 0.7570621468926554,
+        "support": 100.0
+      },
+      "Diabetes": {
+        "precision": 0.5714285714285714,
+        "recall": 0.8148148148148148,
+        "f1-score": 0.6717557251908397,
+        "support": 54.0
+      },
+      "accuracy": 0.7207792207792207,
+      "macro avg": {
+        "precision": 0.7207792207792207,
+        "recall": 0.7424074074074074,
+        "f1-score": 0.7144089360417476,
+        "support": 154.0
+      },
+      "weighted avg": {
+        "precision": 0.765390453702142,
+        "recall": 0.7207792207792207,
+        "f1-score": 0.727149505516694,
+        "support": 154.0
+      }
+    },
+    "baseline_before_tuning": {
+      "accuracy": 0.7403,
+      "recall": 0.5556,
+      "f1": 0.6
+    }
+  },
+  "explainability": {
+    "permutation_importance": {
+      "Glucose": 0.1403,
+      "BMI": 0.0237,
+      "Pregnancies": 0.0214,
+      "DiabetesPedigreeFunction": 0.0135,
+      "Age": 0.0095,
+      "SkinThickness": 0.0016,
+      "Insulin": -0.0005,
+      "BloodPressure": -0.0045
+    },
+    "shap_mean_abs": {
+      "Glucose": 0.1541,
+      "BMI": 0.0753,
+      "Pregnancies": 0.0438,
+      "DiabetesPedigreeFunction": 0.0424,
+      "Age": 0.0265,
+      "Insulin": 0.0125,
+      "BloodPressure": 0.0101,
+      "SkinThickness": 0.0081
+    }
+  }
+}
