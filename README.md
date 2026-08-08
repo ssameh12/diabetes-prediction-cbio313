@@ -190,12 +190,19 @@ matching what the EDA distributions showed.
 
 ### Prediction app
 
-> **📸 TODO before submitting:** run `streamlit run src/app.py`, screenshot it, save as
-> `figures/app_screenshot.png`, then replace this quote block with
-> `![Streamlit app](figures/app_screenshot.png)`.
+![Streamlit app](figures/app_screenshot.png)
 
-Entering a patient with glucose 190 raises the predicted probability from 23.5% to 78.6% and flips
-the screening decision — the app reacts in the clinically expected direction.
+Enter eight measurements and the app returns a probability, a screening decision at the tuned
+0.28 threshold, and a comparison against the population.
+
+Every prediction comes with its own SHAP explanation, so you can see which measurement pushed this
+particular patient's risk up or down:
+
+![Per-patient SHAP explanation](figures/app_screenshot_shap.png)
+
+For the patient above, glucose of 120 and insulin of 80 are *lowering* the predicted risk, while age
+is the only factor pushing it up — which is why the result lands at 23.5% and is not flagged. Raising
+glucose to 190 takes it to 78.6% and flips the decision to flagged.
 
 ---
 
