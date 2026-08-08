@@ -1,0 +1,24 @@
+# Verified with Python 3.14.6 on Windows.
+# Lower bounds rather than exact pins, so the project still installs on the
+# older Python versions commonly found in Colab and university lab machines.
+
+numpy>=1.26
+pandas>=2.0
+scikit-learn>=1.4
+matplotlib>=3.8
+seaborn>=0.13
+joblib>=1.3
+
+# Explainability (bonus)
+shap>=0.44
+
+# Interactive prediction app (bonus)
+streamlit>=1.30
+
+# PDF report generation
+reportlab>=4.0
+pillow>=10.0
+
+# Running notebook.ipynb
+notebook>=7.0
+ipykernel>=6.29
