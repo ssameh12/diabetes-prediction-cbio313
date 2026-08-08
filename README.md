@@ -123,13 +123,14 @@ streamlit run src/app.py
 Enter eight measurements on the sidebar and get a probability, a screening decision at the tuned
 threshold, a comparison against the population, and a per-patient SHAP explanation.
 
-### 4. Rebuild the PDF report
+### 4. Rebuild the report and slides
 
 ```bash
-python report/build_report.py
+python report/build_report.py        # -> report/Final_Report.pdf
+python presentation/build_slides.py  # -> presentation/Project_Presentation.pdf
 ```
 
-Reads `results/metrics.json` and `figures/`, so the report can never drift from the actual results.
+Both read `results/metrics.json` and `figures/`, so neither can drift from the actual results.
 
 ---
 
@@ -153,7 +154,9 @@ diabetes-prediction-cbio313/
 ├── report/
 │   ├── Final_Report.pdf       10-page report
 │   └── build_report.py        generator
-├── presentation/              slides (to follow)
+├── presentation/
+│   ├── Project_Presentation.pdf   19 slides, 16:9
+│   └── build_slides.py            generator
 └── LICENSE
 ```
 
