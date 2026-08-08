@@ -1,0 +1,12 @@
+# Normalise text files, but never touch binaries.
+* text=auto
+
+*.pdf     binary
+*.png     binary
+*.jpg     binary
+*.joblib  binary
+*.xlsx    binary
+*.pptx    binary
+
+# Notebooks are JSON; keep diffs readable but do not mangle them.
+*.ipynb   text eol=lf
