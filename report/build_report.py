@@ -33,8 +33,9 @@ METRICS = json.loads((ROOT / "results" / "metrics.json").read_text(encoding="utf
 FIGURES = ROOT / "figures"
 OUT = ROOT / "report" / "Final_Report.pdf"
 
-AUTHOR = "<< your name >>"
-STUDENT_ID = "<< your student ID >>"
+AUTHOR = "Shahd Sameh Safwat"
+STUDENT_ID = "231002256"
+REPO_URL = "github.com/ssameh12/diabetes-prediction-cbio313"
 
 NAVY = colors.HexColor("#1f3864")
 GREY = colors.HexColor("#5a5a5a")
@@ -133,7 +134,7 @@ table(
      ["Author", AUTHOR],
      ["Student ID", STUDENT_ID],
      ["Date", date.today().strftime("%d %B %Y")],
-     ["Repository", "github.com/<your-account>/diabetes-prediction-cbio313"]],
+     ["Repository", REPO_URL]],
     widths=[4 * cm, 11 * cm],
 )
 story.append(Spacer(1, 1.2 * cm))

@@ -74,7 +74,7 @@ SHAP + permutation-importance explainability, and a Streamlit prediction app.
 ## Installation
 
 ```bash
-git clone https://github.com/<your-account>/diabetes-prediction-cbio313.git
+git clone https://github.com/ssameh12/diabetes-prediction-cbio313.git
 cd diabetes-prediction-cbio313
 
 python -m venv .venv
@@ -238,8 +238,8 @@ positive scores perfect recall.
 
 | | |
 |---|---|
-| Name | *<< your name >>* |
-| Student ID | *<< your student ID >>* |
+| Name | Shahd Sameh Safwat |
+| Student ID | 231002256 |
 | Course | CBIO313 — Data Mining & Machine Learning |
 | Instructor | Dr. Muhammad Elsayeh |
 
