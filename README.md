@@ -153,8 +153,7 @@ diabetes-prediction-cbio313/
 ├── report/
 │   ├── Final_Report.pdf       10-page report
 │   └── build_report.py        generator
-├── presentation/
-│   └── Diabetes_Prediction_CBIO313.pptx   presentation deck
+├── Diabetes_Prediction_CBIO313.pptx   presentation deck
 └── LICENSE
 ```
 
