@@ -149,7 +149,8 @@ diabetes-prediction-cbio313/
 ├── results/                   metrics.json + comparison tables
 ├── report/
 │   └── Final_Report.pdf       10-page report
-├── Diabetes_Prediction_CBIO313.pptx   presentation deck
+├── presentation/
+│   └── Diabetes_Prediction_CBIO313.pptx   presentation deck
 └── LICENSE
 ```
 
