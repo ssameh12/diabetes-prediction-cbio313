@@ -36,6 +36,7 @@ OUT = ROOT / "report" / "Final_Report.pdf"
 AUTHOR = "Shahd Sameh Safwat"
 STUDENT_ID = "231002256"
 REPO_URL = "github.com/ssameh12/diabetes-prediction-cbio313"
+VIDEO_URL = "https://drive.google.com/file/d/1uIBeFOJZGFTf5Zkxpa6KXynUFkqJWbOX/view?usp=drive_link"
 
 NAVY = colors.HexColor("#1f3864")
 GREY = colors.HexColor("#5a5a5a")
@@ -134,7 +135,8 @@ table(
      ["Author", AUTHOR],
      ["Student ID", STUDENT_ID],
      ["Date", date.today().strftime("%d %B %Y")],
-     ["Repository", REPO_URL]],
+     ["Repository", REPO_URL],
+     ["Video demo", VIDEO_URL]],
     widths=[4 * cm, 11 * cm],
 )
 story.append(Spacer(1, 1.2 * cm))
